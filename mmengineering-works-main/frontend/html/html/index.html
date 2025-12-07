@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="MM Engineering Works - Construction & Engineering Solutions">
+    <title>MM Engineering Works - Construction & Engineering Solutions</title>
+    <link rel="stylesheet" href="../../css/style.css?v=1.0">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">                       
+                    <img src="../../image/company logo.jpg" alt="MM Engineering Works Logo" id="logo-img" onerror="this.onerror=null; this.style.display='none';">
+                    <span class="logo-text">MM Engineering Works</span>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#photos" class="nav-link">Photos</a></li>
+                    <li><a href="#contact" class="nav-link">Contact Us</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="home-overlay"></div>
+        <div class="home-content">
+            <h1 class="home-title">MM Engineering Works</h1>
+            <p class="home-subtitle">Building Excellence, Engineering Tomorrow</p>
+            <p class="home-description">Your trusted partner in construction and engineering solutions</p>
+            <a href="#contact" class="btn btn-primary">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Our Projects</h2>
+            <div class="projects-controls">
+                <button class="btn btn-primary" id="add-project-btn">Add New Project</button>
+            </div>
+            
+            <!-- Project Upload Modal -->
+            <div id="project-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="close-project-modal">&times;</span>
+                    <h3>Add New Project</h3>
+                    <form id="project-form">
+                        <div class="form-group">
+                            <label for="project-title">Project Title</label>
+                            <input type="text" id="project-title" name="title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="project-image">Project Image</label>
+                            <input type="file" id="project-image" name="image" accept="image/*" required>
+                            <div class="image-preview" id="project-image-preview"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="project-description">Description</label>
+                            <textarea id="project-description" name="description" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Upload Project</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>MM Engineering Works</h3>
+                    <p>MM Engineering Works is a leading construction and engineering company dedicated to delivering excellence in every project we undertake. With years of experience in the industry, we have built a reputation for quality, reliability, and innovation.</p>
+                    <p>Our team of skilled engineers, architects, and construction professionals work together to bring your vision to life. We specialize in:</p>
+                    <ul class="about-list">
+                        <li>Industrial Construction</li>
+                        <li>Commercial Building Projects</li>
+                        <li>Infrastructure Development</li>
+                        <li>Engineering Consultancy</li>
+                        <li>Project Management</li>
+                        <li>Quality Assurance & Safety</li>
+                    </ul>
+                    <p>At MM Engineering Works, we combine traditional craftsmanship with modern technology to ensure that every project meets the highest standards of quality and safety.</p>
+                </div>
+                <div class="about-image">
+                    <div class="about-placeholder">
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photos Section -->
+    <section id="photos" class="photos-section">
+        <div class="container">
+            <h2 class="section-title">Photo Gallery</h2>
+            <div class="photos-controls">
+                <button class="btn btn-primary" id="upload-photo-btn">Upload Photo</button>
+            </div>
+
+            <!-- Photo Upload Modal -->
+            <div id="photo-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="close-photo-modal">&times;</span>
+                    <h3>Upload Photo</h3>
+                    <form id="photo-form">
+                        <div class="form-group">
+                            <label for="photo-image">Select Photo</label>
+                            <input type="file" id="photo-image" name="image" accept="image/*" required>
+                            <div class="image-preview" id="photo-image-preview"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="photo-caption">Caption (Optional)</label>
+                            <input type="text" id="photo-caption" name="caption" placeholder="Enter photo caption">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Upload Photo</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Photos Grid -->
+            <div class="photos-grid" id="photos-grid">
+                <!-- Photos will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-item">
+                        <h4>Address</h4>
+                        <p> Street<br>keeranur<br>pudukkottai, Tamilnadu State - 622504</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Phone</h4>
+                        <p>+91  </p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Email</h4>
+                        <p>info@mmengineeringworks.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Working Hours</h4>
+                        <p>Monday - Saturday: 9:00 AM - 6:00 PM<br></p>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="contact-name">Name</label>
+                            <input type="text" id="contact-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-phone">Phone</label>
+                            <input type="tel" id="contact-phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../../image/company logo.jpg" alt="MM Engineering Works Logo" id="footer-logo-img" onerror="this.onerror=null; this.style.display='none';">
+                    <span>MM Engineering Works</span>
+                </div>
+                <p>&copy; 2025 MM Engineering Works. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js?v=1.0"></script>
+    <script>
+        // Chrome-specific fixes and cache busting
+        (function() {
+            'use strict';
+            
+            // Prevent caching issues in Chrome
+            if (navigator.userAgent.indexOf('Chrome') > -1) {
+                // Clear service workers if any
+                if ('serviceWorker' in navigator) {
+                    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                        for(let registration of registrations) {
+                            registration.unregister();
+                        }
+                    });
+                }
+                
+                // Force hard reload on Ctrl+Shift+R or Cmd+Shift+R
+                window.addEventListener('keydown', function(e) {
+                    if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'R') {
+                        e.preventDefault();
+                        window.location.reload(true);
+                    }
+                });
+            }
+            
+            // Ensure all resources are loaded
+            window.addEventListener('load', function() {
+                console.log('Page loaded successfully in Chrome');
+                
+                // Check if all critical elements are present
+                const criticalElements = [
+                    'nav-menu',
+                    'projects-grid',
+                    'photos-grid',
+                    'contact-form'
+                ];
+                
+                criticalElements.forEach(function(id) {
+                    const element = document.getElementById(id);
+                    if (!element) {
+                        console.warn('Critical element not found: ' + id);
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
+
